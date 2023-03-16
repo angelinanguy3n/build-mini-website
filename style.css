@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+/*reset padding and margin bc by default elements have margins on them*/
+
+nav {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 0 16px;
+  background-color: #cafdff;
+}
+/*jcc makes logo on the left and links on the right*/
+/*aic makes links stay in center of nav*/
+/*Padding is used so elements dont touch sides of the screen*/
+/*padding usually divisible by 8*/
+
+header {
+  background-color: #eadcff;
+  height: calc(100vh-70px);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*-70px because nav height was set to 70px*/
+
+h1 {
+  font-size: 72px;
+}
+
+.subheader {
+  font-size: 36px;
+  margin: 16px 0 24px 0;
+}
+/*margin adds spacing between all elements in the header section*/
+button {
+  background-color: #05c7cf;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+a {
+  color: black;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.logo {
+  width: 300px;
+}
+
+/*width changes size of logo in nav*/
+
+ul {
+  display: flex;
+}
+/*display makes links in nav be side by sid*/
+
+li {
+  list-style-type: none;
+  padding-left: 16px;
+}
+/*padding left moves the dotpoints in the nav */
+
+.row {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
+ABOUT
+*/
+
+#about,
+#discord,
+#contact,
+footer {
+  padding: 40px 0px;
+}
+
+#about {
+  background-color: #f8ffdc;
+}
+
+h2 {
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.section__description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__img--wrapper {
+  width: 100%;
+}
+/*video said 40%*/
+
+img {
+  width: 100%;
+}
+
+.about__img--wrapper,
+.section__description--wrapper {
+  padding: 0 24px;
+}
+
+.section__description--wrapper {
+  width: 60%;
+}
+
+.section__description--para {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+/*
+DISCORD
+*/
+
+#discord {
+  background-color: #cefeff;
+}
+
+/*
+Contact
+*/
+
+#contact {
+  background-color: #dce9ff;
+}
+
+form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+/*margin centers the form */
+
+input,
+textarea {
+  margin-bottom: 24px;
+  font-size: 20px;
+  padding: 6px 12px;
+}
+
+/*
+Footer
+*/
+
+footer {
+  background-color: #aaf5ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__logo {
+  max-width: 480px;
+  margin-bottom: 16px;
+}
+
+.footer__links {
+  margin-bottom: 32px;
+}
+
+.footer__link {
+  padding: 0 16px;
+}
+
+/*small phones,tablets,large phones*/
+@media (max-width: 728px) {
+  .row {
+    flex-direction: column;
+  }
+  .home__description {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home__description--button {
+    max-width: 240px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 60px;
+  }
+
+  .subheader {
+    text-align: center;
+    font-size: 28px;
+  }
+  ul {
+    display: none;
+  }
+
+  .section__description {
+    flex-direction: column;
+  }
+
+  .section__description--wrapper{
+      width:100%
+  }
+
+  .about__img--wrapper{
+      width: 100%;
+  }
+
+  #discord .section__description{
+      flex-direction: column-reverse ; /*doesnt flip image!  */
+  }
+
+  footer{
+      padding:48px 24px;
+      /*add padding when logo size doesnt decrease*/
+  }
+
+  .footer__logo{
+      max-width: 360px;
+  }
+  .footer__link{
+      padding: 0 4px;
+      font-size: 18px;
+  }
+
+  .footer__links{
+      margin-bottom: 24px;
+  }
+}
+
+
